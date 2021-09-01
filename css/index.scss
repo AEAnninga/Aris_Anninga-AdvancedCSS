@@ -1,0 +1,106 @@
+@use "../css/reset";
+@use "../css/constants";
+@use "../css/testimonial";
+@use "../css/hidden";
+@use "../css/socialmedia";
+
+
+body {
+    background: $page-background;
+    font-family: 'open sans';      
+}
+
+.testimonial {       
+    @include testimonial;
+    @include testimonial-text;
+    @include testimonial-name;
+    &__hidden {
+        @include hidden;
+        &:hover {
+            @include hidden-hover;
+        }
+        &--button {
+            button {
+                @include button;
+                &:hover {
+                    @include button-hover;
+                }
+            }
+        }  
+    }   
+}
+
+@include icon-reset;
+
+aside {
+    position: sticky;
+    bottom: 50px;
+    display: flex;
+    flex-flow: column nowrap;
+    .social-media { 
+        @include socialmedia;
+        &__blog {
+            @include socialmedia-item(#e17b77);         
+            &::before {
+                @include socialmedia-before("\f37c"); 
+            }
+            @include socialmedia-after-hover("Check out my Blog");   
+        }
+        &__facebook {  
+            @include socialmedia-item(#3b5998);         
+            &::before {
+                @include socialmedia-before("\f39e"); 
+            }
+            @include socialmedia-after-hover("Check out my Blog");   
+        }
+        &__twitter {  
+            @include socialmedia-item(#00aced);         
+            &::before {
+                @include socialmedia-before("\f099"); 
+            }
+            @include socialmedia-after-hover("Check out my Blog");   
+        }
+        &__github {  
+            @include socialmedia-item(#333);         
+            &::before {
+                @include socialmedia-before("\f09b"); 
+            }
+            @include socialmedia-after-hover("Check out my Blog");   
+        }
+        &__linkedin {  
+            @include socialmedia-item(#007bb6);         
+            &::before {
+                @include socialmedia-before("\f0e1"); 
+            }
+            @include socialmedia-after-hover("Check out my Blog");   
+        }
+    }
+}
+
+@media screen and (min-width: 768px) {
+    body{
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+        grid-template-areas: 
+            ". t1 . t2 ."
+            ". t3 . t4 ."
+            ". t5 . t6 ."
+            ". t7 . . sm"
+        ;
+    }
+    @include grid-items;
+}
+
+@media screen and (min-width: 1024px) {
+    body{
+        
+        grid-template-columns: repeat(7, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        grid-template-areas: 
+            ". t1 . t2 . t3 ."
+            ". t4 . t5 . t6 ."
+            ". t7 . . . . sm"
+        ;
+    }
+}

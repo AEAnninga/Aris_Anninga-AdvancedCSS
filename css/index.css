@@ -1,0 +1,389 @@
+@charset "UTF-8";
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #c3cfe2;
+  font-family: "open sans";
+}
+
+.testimonial {
+  margin: 25px;
+  border-radius: 25px;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  width: 350px;
+  height: 436px;
+  background: white;
+  overflow: hidden;
+  box-shadow: 0px 5px 10px #8b8b8b;
+}
+.testimonial__text {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  line-height: 30px;
+  height: 66%;
+  width: 100%;
+  padding: 25px;
+}
+.testimonial__text h1 {
+  font-size: 16px;
+  margin-top: 10px;
+  color: #5f5f5f;
+}
+.testimonial__text--image img {
+  position: relative;
+  margin-top: 30px;
+  width: 90px;
+  border-radius: 45px;
+  border: 7px solid white;
+  background: white;
+}
+.testimonial__name {
+  height: 34%;
+  width: 100%;
+  padding: 25px;
+  background: #686de0;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+.testimonial__name h1 {
+  color: white;
+  margin-top: 20px;
+  font-size: 16px;
+}
+.testimonial__name h3 {
+  color: #babdfc;
+}
+.testimonial__hidden {
+  position: absolute;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: center;
+  width: 350px;
+  height: 436px;
+  border-radius: 25px;
+  background: #686de0;
+  opacity: 0;
+  transition: opacity 1s;
+}
+.testimonial__hidden:hover {
+  opacity: 1;
+  transition: 1s opacity;
+}
+.testimonial__hidden--button button {
+  width: 150px;
+  height: 50px;
+  border: none;
+  border-radius: 10px;
+  color: #686de0;
+  background-color: white;
+  transition: all 1s;
+  font-family: "open sans";
+}
+.testimonial__hidden--button button:hover {
+  box-shadow: -10px 10px 10px black;
+  border-bottom: 5px inset white;
+  border-left: 5px inset white;
+  background-color: #686de0;
+  color: white;
+  transform: translateX(10px);
+  transition: all 1s;
+}
+
+.icon::before {
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+}
+
+aside {
+  position: sticky;
+  bottom: 50px;
+  display: flex;
+  flex-flow: column nowrap;
+}
+aside .social-media {
+  display: flex;
+  flex-flow: column nowrap;
+  width: 100%;
+  justify-content: flex-end;
+  align-items: flex-end;
+  position: absolute;
+  bottom: 50px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+aside .social-media li > a {
+  text-decoration: none;
+}
+aside .social-media__blog {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: start;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  transition: width 1s;
+  overflow: hidden;
+  gap: 25px;
+  padding: 12px;
+  background-color: #e17b77;
+}
+aside .social-media__blog::before {
+  content: "";
+  font-family: "Font Awesome 5 Brands";
+  font-size: 30px;
+  color: white;
+}
+aside .social-media__blog::after {
+  content: "Check out my Blog";
+  color: white;
+  text-decoration: underline;
+  height: 24px;
+  overflow: hidden;
+  opacity: 0;
+  transition: opacity 0.4s;
+}
+aside .social-media__blog:hover {
+  width: 250px;
+  transition: width 1s;
+  overflow: hidden;
+}
+aside .social-media__blog:hover::after {
+  content: "Check out my Blog";
+  color: white;
+  text-decoration: underline;
+  height: 24px;
+  overflow: hidden;
+  opacity: 1;
+  transition: opacity 3s;
+}
+aside .social-media__facebook {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: start;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  transition: width 1s;
+  overflow: hidden;
+  gap: 25px;
+  padding: 12px;
+  background-color: #3b5998;
+}
+aside .social-media__facebook::before {
+  content: "";
+  font-family: "Font Awesome 5 Brands";
+  font-size: 30px;
+  color: white;
+}
+aside .social-media__facebook::after {
+  content: "Check out my Blog";
+  color: white;
+  text-decoration: underline;
+  height: 24px;
+  overflow: hidden;
+  opacity: 0;
+  transition: opacity 0.4s;
+}
+aside .social-media__facebook:hover {
+  width: 250px;
+  transition: width 1s;
+  overflow: hidden;
+}
+aside .social-media__facebook:hover::after {
+  content: "Check out my Blog";
+  color: white;
+  text-decoration: underline;
+  height: 24px;
+  overflow: hidden;
+  opacity: 1;
+  transition: opacity 3s;
+}
+aside .social-media__twitter {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: start;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  transition: width 1s;
+  overflow: hidden;
+  gap: 25px;
+  padding: 12px;
+  background-color: #00aced;
+}
+aside .social-media__twitter::before {
+  content: "";
+  font-family: "Font Awesome 5 Brands";
+  font-size: 30px;
+  color: white;
+}
+aside .social-media__twitter::after {
+  content: "Check out my Blog";
+  color: white;
+  text-decoration: underline;
+  height: 24px;
+  overflow: hidden;
+  opacity: 0;
+  transition: opacity 0.4s;
+}
+aside .social-media__twitter:hover {
+  width: 250px;
+  transition: width 1s;
+  overflow: hidden;
+}
+aside .social-media__twitter:hover::after {
+  content: "Check out my Blog";
+  color: white;
+  text-decoration: underline;
+  height: 24px;
+  overflow: hidden;
+  opacity: 1;
+  transition: opacity 3s;
+}
+aside .social-media__github {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: start;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  transition: width 1s;
+  overflow: hidden;
+  gap: 25px;
+  padding: 12px;
+  background-color: #333;
+}
+aside .social-media__github::before {
+  content: "";
+  font-family: "Font Awesome 5 Brands";
+  font-size: 30px;
+  color: white;
+}
+aside .social-media__github::after {
+  content: "Check out my Blog";
+  color: white;
+  text-decoration: underline;
+  height: 24px;
+  overflow: hidden;
+  opacity: 0;
+  transition: opacity 0.4s;
+}
+aside .social-media__github:hover {
+  width: 250px;
+  transition: width 1s;
+  overflow: hidden;
+}
+aside .social-media__github:hover::after {
+  content: "Check out my Blog";
+  color: white;
+  text-decoration: underline;
+  height: 24px;
+  overflow: hidden;
+  opacity: 1;
+  transition: opacity 3s;
+}
+aside .social-media__linkedin {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: start;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  transition: width 1s;
+  overflow: hidden;
+  gap: 25px;
+  padding: 12px;
+  background-color: #007bb6;
+}
+aside .social-media__linkedin::before {
+  content: "";
+  font-family: "Font Awesome 5 Brands";
+  font-size: 30px;
+  color: white;
+}
+aside .social-media__linkedin::after {
+  content: "Check out my Blog";
+  color: white;
+  text-decoration: underline;
+  height: 24px;
+  overflow: hidden;
+  opacity: 0;
+  transition: opacity 0.4s;
+}
+aside .social-media__linkedin:hover {
+  width: 250px;
+  transition: width 1s;
+  overflow: hidden;
+}
+aside .social-media__linkedin:hover::after {
+  content: "Check out my Blog";
+  color: white;
+  text-decoration: underline;
+  height: 24px;
+  overflow: hidden;
+  opacity: 1;
+  transition: opacity 3s;
+}
+
+@media screen and (min-width: 768px) {
+  body {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-areas: ". t1 . t2 ." ". t3 . t4 ." ". t5 . t6 ." ". t7 . . sm";
+  }
+
+  .tes1 {
+    grid-area: t1;
+  }
+
+  .tes2 {
+    grid-area: t2;
+  }
+
+  .tes3 {
+    grid-area: t3;
+  }
+
+  .tes4 {
+    grid-area: t4;
+  }
+
+  .tes5 {
+    grid-area: t5;
+  }
+
+  .tes6 {
+    grid-area: t6;
+  }
+
+  .tes7 {
+    grid-area: t7;
+  }
+
+  aside {
+    grid-area: sm;
+  }
+}
+@media screen and (min-width: 1024px) {
+  body {
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-areas: ". t1 . t2 . t3 ." ". t4 . t5 . t6 ." ". t7 . . . . sm";
+  }
+}/*# sourceMappingURL=index.css.map */

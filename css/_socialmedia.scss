@@ -1,0 +1,72 @@
+@mixin icon-reset() {
+    .icon::before {
+        display: inline-block;
+        font-style: normal;
+        font-variant: normal;
+        text-rendering: auto;
+        -webkit-font-smoothing: antialiased;
+    }
+}
+
+@mixin socialmedia() {
+    display: flex;
+    flex-flow: column nowrap;
+    width: 100%;
+    justify-content: flex-end;
+    align-items: flex-end;    
+    position: absolute;
+    bottom: 50px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    li > a {
+        text-decoration: none;
+    }   
+}
+
+@mixin socialmedia-item($background) {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: start;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    transition: width 1s;
+    overflow: hidden;        
+    gap: 25px;
+    padding: 12px;
+    background-color: $background; 
+}
+
+@mixin socialmedia-before($content) {
+    content: $content;
+    font-family: "Font Awesome 5 Brands";
+    font-size: 30px;
+    color: white;
+}
+
+@mixin socialmedia-after-hover($content) {
+    &::after {
+        content:$content;
+        color: white;
+        text-decoration: underline;
+        height: 24px;
+        overflow: hidden;
+        opacity: 0;
+        transition: opacity 0.4s;
+    }
+    &:hover {
+        width: 250px;
+        transition: width 1s;
+        overflow: hidden;
+        &::after {
+            content: $content;
+            color: white;
+            text-decoration: underline;
+            height: 24px;
+            overflow: hidden;
+            opacity: 1;
+            transition: opacity 3s;
+        }
+    }
+}

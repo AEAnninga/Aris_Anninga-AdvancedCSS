@@ -1,0 +1,59 @@
+@mixin outline() {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+}
+
+@mixin testimonial {
+    margin: 25px;
+    border-radius: 25px;
+    @include outline;
+    width: 350px;
+    height: 436px;
+    background: $text-background;
+    overflow: hidden;
+    box-shadow: 0px 5px 10px $shadow-color; 
+}
+
+@mixin testimonial-text {
+    &__text {
+        @include outline;
+        line-height: 30px;
+        height: 66%;
+        width: 100%;
+        padding: 25px;
+        h1 {
+            font-size: 16px;
+            margin-top: 10px;
+            color: $text-color;
+        }
+        &--image img {
+            position: relative;
+            margin-top: 30px;                
+            width: 90px;
+            border-radius: 45px;
+            border: $image-border;
+            background: $text-background;
+        }
+    }
+}
+
+@mixin testimonial-name {
+    &__name {
+        height: 34%;
+        width: 100%;        
+        padding: 25px;
+        background: $footer-background;
+        @include outline;
+        justify-content: center;
+        gap: 5px;        
+        h1 {
+            color: $footer-name;
+            margin-top: 20px;
+            font-size: 16px;
+        }
+        h3 {
+            color: $footer-text;
+        }
+    }
+}

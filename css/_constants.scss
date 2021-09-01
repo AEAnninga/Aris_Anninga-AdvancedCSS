@@ -1,0 +1,41 @@
+$page-background: #c3cfe2;
+$text-background:white;
+$text-color: rgb(95, 95, 95);
+$image-border: 7px solid white;
+$footer-background: #686de0;
+$footer-name: white;
+$footer-text: #babdfc;
+$shadow-color: rgb(139, 139, 139);
+
+@mixin grid-items() {
+    .tes1 {
+        grid-area: t1;
+    }
+    .tes2 {
+        grid-area: t2;
+    }
+
+    .tes3 {
+        grid-area: t3;
+    }
+
+    .tes4 {
+        grid-area: t4;
+    }
+
+    .tes5 {
+        grid-area: t5;
+    }
+
+    .tes6 {
+        grid-area: t6;
+    }
+
+    .tes7 {
+        grid-area: t7;
+    }
+
+    aside {
+        grid-area: sm;
+    }
+}
